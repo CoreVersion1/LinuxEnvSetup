@@ -15,4 +15,5 @@ tmux
 sudo apt-get install -y \
 git \
 cmake \
-cmake-curses-gui
+cmake-curses-gui \
+build-essential
