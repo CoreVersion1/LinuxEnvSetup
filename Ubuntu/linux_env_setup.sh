@@ -16,4 +16,5 @@ sudo apt-get install -y \
 git \
 cmake \
 cmake-curses-gui \
-build-essential
+build-essential \
+gdb
