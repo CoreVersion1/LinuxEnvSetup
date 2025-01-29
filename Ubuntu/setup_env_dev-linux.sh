@@ -1,19 +1,26 @@
 #!/bin/bash
 set -e
 
-sudo apt-get update
-sudo apt-get upgrade -y
+# Check if script is run with sudo
+if [ "$(id -u)" -ne 0 ]; then
+    echo "[ERROR] Please run this script with sudo."
+    exit 1
+fi
+
+sudo apt update
+sudo apt upgrade -y
 
 # basic tools
-sudo apt-get install -y \
+sudo apt install -y \
   net-tools \
+  zip \
   unzip \
   mlocate \
   tree \
   tmux
 
 # develop depenencies
-sudo apt-get install -y \
+sudo apt install -y \
   git \
   make \
   cmake \
